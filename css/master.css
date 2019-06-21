@@ -1,0 +1,225 @@
+*{
+    font-family: 'Roboto';
+}
+
+body{
+    margin: 0;
+}
+
+.game{
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.table{
+    display: grid;
+    grid-template: 1fr repeat(3, 200px) 1fr/ 1fr repeat(3, 200px) 1fr;
+    height: 100vh;
+}
+
+.base{
+    grid-area: 2 / 2 / 5 / 5;
+    background-image: url('../img/dark_stripes.png');
+    /* background-color: rgb(50, 57, 57); */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  1px 3px 5px 0px rgba(0,0,0,1),
+                 0px 7px 10px 0px rgba(0,0,0,1),
+                 inset 0px 8px 5px 0px rgba(250, 250, 250, .2),
+                 inset 0px -1px 5px 0px rgba(250, 250, 250, .2);
+}
+
+
+.colors{
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template: repeat(2, 1fr) /  repeat(2, 1fr);
+    grid-gap: 5% 5%;
+}
+
+
+
+.green{
+    background-color: #156c39;
+    border-radius: 100% 0 0 0 ;
+    box-shadow: inset 5px 10px 4px 0px rgba(250, 250, 250, .2),
+                inset -8px -5px 4px 0px rgba(250, 250, 250, .2);
+}
+
+.green.light{
+    background-color: #05ff00;
+    border-radius: 100% 0 0 0 ;
+    box-shadow: inset -8px -10px 15px 0px #18ac15,
+                inset 8px 5px 4px 0px #18ac15,
+                0px 0px 15px 10px #5af157,
+                0px 0px 8px 6px #84e782;
+}
+
+.red{
+    background-color: #c72b20;
+    border-radius: 0 100% 0 0;
+    box-shadow: inset -5px 10px 4px 0px rgba(250, 250, 250, .2),
+                inset 8px -5px 4px 0px rgba(250, 250, 250, .2);
+                /* inset 0px -2px 4px 0px rgba(250, 250, 250, .2); */
+}
+
+.red.light{
+    background-color: #ff1100;
+    border-radius: 0 100% 0 0;
+    box-shadow: inset -5px 10px 15px 0px #8e150c,
+                inset 8px -5px 4px 0px #8e150c,
+                0px 0px 15px 10px #eb867f,
+                0px 0px 2px 6px #cb1c10;
+}
+
+.yellow{
+     background-color: #ab9e2c;
+     border-radius:  0 0 100% 0;
+     box-shadow: inset 5px 10px 4px 0px rgba(250, 250, 250, .2),
+                 inset -8px -5px 4px 0px rgba(250, 250, 250, .2);
+
+}
+
+.yellow.light{
+    background-color: #ffed00;
+    border-radius:  0 0 100% 0;
+    box-shadow: inset 5px -10px 15px 0px #cfc112,
+                inset -8px 5px 4px 0px #cfc112,
+                0px 0px 15px 10px #e8da26,
+                0px 0px 2px 6px #e2d966;
+}
+
+.blue{
+    background-color: #2a8fbd;
+    border-radius:  0 0 0 100%;
+    box-shadow: inset 5px -10px 4px 0px rgba(250, 250, 250, .2),
+                inset -4px 8px 4px 0px rgba(250, 250, 250, .2);
+
+}
+
+.blue.light{
+    background-color: #0085ff;
+    border-radius:  0 0 0 100%;
+    box-shadow: inset -5px -10px 15px 0px #0a62b3,
+                inset 8px 5px 4px 0px #0a62b3,
+                0px 0px 15px 10px #6caae2,
+                0px 0px 2px 6px #2e8be0;
+}
+
+.centerBase{
+    margin-top: -30%;
+    margin-left:-30%;
+    width: 160%;
+    height: 160%;
+    background-image: url('../img/dark_stripes.png');
+    grid-area: 3 / 3 / 4 / 4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.controls{
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    background-image: url('../img/micro_carbon.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: inset 0 0 8px 8px rgb(0, 0, 0);
+}
+
+:active, :focus {
+  outline: 0;
+}
+
+.hole{
+    width: 110px;
+    height: 110px;
+    background-color: rgb(26,27,29);
+    border-radius: 50%;
+    box-shadow: 0px 1px 0px 0px rgba(250,250,250,0.1),
+                inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+    /* Alineación Botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simon-button{
+    /* Alineación Icono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Apariencia Boton */
+    box-shadow: 0px 3px 0px 0px rgb(34,34,34), /* 1st Shadow */
+                0px 7px 10px 0px rgb(17,17,17), /* 1nd Shadow */
+                inset 0px 1px 1px 0px rgba(250, 250, 250, .2), /* 3rd Shadow */
+                inset 0px -12px 35px 0px rgba(0, 0, 0, .5); /* 4th Shadow */
+    background-color: rgb(83,87,93);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* icono */
+    text-decoration: none;
+    font-size: 50pt;
+    color: rgb(37,37,37);
+    text-shadow: 0px 1px 1px rgba(250,250,250,0.1);
+}
+
+.simon-button:active{
+    box-shadow: 0px 0px 0px 0px rgb(34,34,34), /* 1st Shadow */
+          0px 3px 7px 0px rgb(17,17,17), /* 2nd Shadow */
+          inset 0px 1px 1px 0px rgba(250, 250, 250, .2), /* 3rd Shadow */
+          inset 0px -10px 35px 5px rgba(0, 0, 0, .5); /* 4th Shadow */
+    background-color: rgb(83,87,93);
+}
+
+
+.on-button{
+    box-shadow: 0px 0px 0px 0px rgb(34,34,34),
+          0px 3px 7px 0px rgb(17,17,17),
+          inset 0px 1px 1px 0px rgba(250, 250, 250, .2),
+          inset 0px -10px 35px 5px rgba(0, 0, 0, .5);
+    color: #fff;
+    text-shadow: 0px 0px 3px rgb(250,250,250);
+}
+
+/* icono */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?isb3ud');
+  src:  url('../fonts/icomoon.eot?isb3ud#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?isb3ud') format('truetype'),
+    url('../fonts/icomoon.woff?isb3ud') format('woff'),
+    url('../fonts/icomoon.svg?isb3ud#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-switch:before {
+  content: "\e9b6";
+}

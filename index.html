@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Estilos  -->
+
+    <link rel="stylesheet" href="css/master.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg" href="img/simon.svg">
+    <title>Simon</title>
+</head>
+<body>
+    <div class="game">
+        <div class="table">
+            <div class="base">
+                <div class="colors">
+                    <div id="verde" class="green" data-color="verde"></div>
+                    <div id="rojo" class="red" data-color="rojo"></div>
+                    <div id="azul" class="blue" data-color="azul"></div>
+                    <div id="amarillo" class="yellow" data-color="amarillo"></div>
+                </div>
+            </div>
+            <div class="centerBase">
+                <div class="controls">
+                    <div class="hole">
+                        <a href="#button" id="button" class="icon-switch simon-button" onclick="startGame()"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
